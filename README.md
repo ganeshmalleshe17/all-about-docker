@@ -32,3 +32,17 @@ apt update && apt install docker # for linux
 22) docker network ls #“It shows all available Docker networks.”
 23) docker volume ls #“Docker volume ls lists all persistent volumes.”
 ```
+## Docker file for creating java image and deploying java application
+FROM eclipse-temurin:17-jdk-alpine
+# run a base image which gives all require tools and dependancies
+```sh
+WORKDIR /app
+#creating a folder where application code will be stored
+COPY src/Main.java .
+#copy the source code from host machine to container
+RUN javac Main.java
+#compile the application code
+CMD ["java" , "Main"]
+# run the application
+```
+
