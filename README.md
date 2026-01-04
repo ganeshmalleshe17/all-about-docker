@@ -1,4 +1,4 @@
-# all-about-docker
+# All-about-docker
 
 ## How to install docker in ubuntu and linux server
 ```sh
