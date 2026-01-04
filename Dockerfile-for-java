@@ -1,0 +1,11 @@
+FROM eclipse-temurin:17-jdk-alpine
+# run a base image which gives all require tools and dependancies
+WORKDIR /app
+#creating a folder where application code will be stored
+COPY src/Main.java .
+#copy the source code from host machine to container
+RUN javac Main.java
+#compile the application code
+CMD ["java" , "Main"]
+# run the application
+
