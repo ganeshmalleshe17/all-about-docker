@@ -33,9 +33,10 @@ apt update && apt install docker # for linux
 23) docker volume ls #“Docker volume ls lists all persistent volumes.”
 ```
 ## Docker file for creating java image and deploying java application
+```sh
 FROM eclipse-temurin:17-jdk-alpine
 # run a base image which gives all require tools and dependancies
-```sh
+
 WORKDIR /app
 #creating a folder where application code will be stored
 COPY src/Main.java .
